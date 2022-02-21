@@ -13,7 +13,12 @@
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "mongodb": "^4.4.0"
+    "luxon": "^1.28.0",
+    "mongodb": "^4.4.0",
+    "vue-datetime": "^1.0.0-beta.14",
+    "vue2-datepicker": "^3.10.4",
+    "vuejs-datepicker": "^1.6.2",
+    "weekstart": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

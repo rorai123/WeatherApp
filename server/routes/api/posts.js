@@ -15,7 +15,10 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const posts = await loadPostsCollection();
     await posts.insertOne({
-        text: req.body.text,
+        city: req.body.city,
+        time: req.body.time,
+        temp: req.body.temp,
+        tempType: req.body.tempType,
         createdAt: new Date()
     });
     res.status(201).send();
@@ -29,11 +32,8 @@ router.delete('/:id', async (req, res) => {
 });
 
 async function loadPostsCollection() {
-    const client = await mongodb.MongoClient.connect
-    ('mongodb+srv://rorai:Athletigen123!@cluster0.vavxj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
-        useNewUrlParser: true
-    });
-
+    const client = await mongodb.MongoClient.connect('mongodb+srv://rorai123:rorai123@cluster0.vavxj.mongodb.net/Cluster0?retryWrites=true&w=majority', 
+    {useNewUrlParser: true});
     return client.db('Cluster0').collection('posts');
 }
 
