@@ -15,6 +15,6 @@
 1.) Open another terminal separate from the previous one.
 2.) In the terminal, cd into the clients folder and run the commands below in sequential order to start the client side:
     a.) npm install
-    b.) npm run dev
+    b.) npm run serve
 3.) Finally, go to http://localhost:8080/ in the browser to use application
 ```
